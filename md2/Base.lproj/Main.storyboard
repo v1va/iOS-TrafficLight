@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,60 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="md2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gQs-sR-A90">
+                                <rect key="frame" x="0.0" y="210" width="414" height="162"/>
+                                <connections>
+                                    <action selector="timeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="N7q-VS-Jdn"/>
+                                </connections>
+                            </datePicker>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ppk-XM-9R8">
+                                <rect key="frame" x="107" y="440.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="201" id="EFs-CC-DpN"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="IT OFF. SPIN THE WHEEL!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eVm-ze-0DM">
+                                <rect key="frame" x="112" y="129" width="190" height="49"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="GJd-KJ-QJF"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eVm-ze-0DM" firstAttribute="centerX" secondItem="gQs-sR-A90" secondAttribute="centerX" id="KYg-LA-WKw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ppk-XM-9R8" secondAttribute="bottom" constant="221" id="KgQ-yT-2fC"/>
+                            <constraint firstItem="gQs-sR-A90" firstAttribute="top" secondItem="eVm-ze-0DM" secondAttribute="bottom" constant="32" id="MJn-fc-vU7"/>
+                            <constraint firstItem="eVm-ze-0DM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="PtW-v2-1TJ"/>
+                            <constraint firstItem="Ppk-XM-9R8" firstAttribute="centerX" secondItem="gQs-sR-A90" secondAttribute="centerX" id="itH-8J-w17"/>
+                            <constraint firstItem="Ppk-XM-9R8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="lHT-e6-kM0"/>
+                            <constraint firstItem="eVm-ze-0DM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112" id="nEf-0R-Hds"/>
+                            <constraint firstItem="Ppk-XM-9R8" firstAttribute="top" secondItem="gQs-sR-A90" secondAttribute="bottom" constant="68" id="pB8-wo-bqn"/>
+                            <constraint firstItem="Ppk-XM-9R8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tsM-CY-s3L"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="circle" destination="Ppk-XM-9R8" id="l5d-fV-hgR"/>
+                        <outlet property="colorLabel" destination="eVm-ze-0DM" id="6Vj-ZP-Po1"/>
+                        <outlet property="datePicker" destination="gQs-sR-A90" id="7vm-VF-CXU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
 </document>
