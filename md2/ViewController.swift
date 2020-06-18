@@ -37,19 +37,19 @@ class ViewController: UIViewController {
             colorLabel.textColor = .green
         }
         
-        if time == 120{
+        else if time == 120{
             circle.tintColor = .yellow
             colorLabel.text = "U should WAIT!"
             colorLabel.textColor = .yellow
         }
         
-        if time > 120 && time < 360{
+        else if time > 120 && time < 360{
             circle.tintColor = .red
             colorLabel.text = "U should STOP!"
             colorLabel.textColor = .red
         }
         
-        if time == 360{
+        else if time == 360{
             circle.tintColor = .yellow
             colorLabel.text = "U should WAIT!"
             colorLabel.textColor = .green

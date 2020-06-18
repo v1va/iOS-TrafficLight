@@ -31,17 +31,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gQs-sR-A90">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQs-sR-A90">
                                 <rect key="frame" x="6" y="273" width="414" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="8Vg-bJ-2Cj"/>
                                 </constraints>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="599580000">
-                                    <!--2020-01-01 14:00:00 +0000-->
+                                <date key="date" timeIntervalSinceReferenceDate="-978249599.36257601">
+                                    <!--1970-01-01 16:00:00 +0000-->
                                 </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="599644799">
-                                    <!--2020-01-02 07:59:59 +0000-->
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978256800">
+                                    <!--1970-01-01 14:00:00 +0000-->
                                 </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="-978192060">
+                                    <!--1970-01-02 07:59:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="lv_LV"/>
                                 <connections>
                                     <action selector="timeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="N7q-VS-Jdn"/>
                                 </connections>
