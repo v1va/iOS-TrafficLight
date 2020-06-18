@@ -20,7 +20,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         circle.tintColor = .gray
-        datePicker.datePickerMode = UIDatePicker.Mode.time
     }
     
     
